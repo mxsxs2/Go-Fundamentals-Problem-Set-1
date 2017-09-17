@@ -30,7 +30,7 @@ func isPalindrome(text string) bool{
 	back:= len(text)-1
 	//Loop until the two numbers meet
 	for front<back{
-		//If there is any difference then it is not a palindrome
+		//If there is any difference then it is not a palindrome, also works with UTF-8
 		if(string([]rune(text)[front])!=string([]rune(text)[back])){
 			return false
 		}
