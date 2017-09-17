@@ -36,7 +36,7 @@ func Sqrt(x float64) float64 {
 	//Return the estimated number
     return z
 }
-
+//Main function
 func main() {
 
 	fmt.Println("1 new:",Sqrt(1))
