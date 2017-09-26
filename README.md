@@ -14,7 +14,7 @@ To run any of the applications, navigate to the desired folder and type this com
 
 The previous command will compile the go file into a runnable.
 
-Once the runnable is created the it can be run in terminal, for example: 
+Once the runnable is created then it can be run in terminal, for example: 
 `./<name_of_runnable>` 
 
 ## The problems solved in this repository
