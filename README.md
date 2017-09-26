@@ -1,22 +1,22 @@
 # Go Problems 1
 This repository contains common programming problems solved in GO language.
 
-###How to install and run GO
+### How to install and run GO
 
 To install, simply go to GO's website and download the installer https://golang.org/
 
 When the installation is done, the "go" command is going to be avaialable in terminal.(You have to restart an opened terminal)
 
-###How to use this repository
+### How to use this repository
 
 To run any of the applications, navigate to the desired folder and type this command: 
-````go build <name_of_go_file>
+``` go build <name_of_go_file>
 The previous command will compile the go file into a runnable.
 
 Once the runnable is created the it can be run in terminal, for example: 
-```./<name_of_runnable> 
+``` ./<name_of_runnable> 
 
-##The problems solved in this repository
+## The problems solved in this repository
 
 ### 1. Kon’nichiwa, Sekai!
 
