@@ -1,54 +1,70 @@
 # Go Problems 1
+This repository contains common programming problems solved in GO language.
 
-This repository contains the solutions written in go for the following problems:
+###How to install and run GO
 
-## 1. Kon’nichiwa, Sekai!
+To install, simply go to GO's website and download the installer https://golang.org/
+
+When the installation is done, the "go" command is going to be avaialable in terminal.(You have to restart an opened terminal)
+
+###How to use this repository
+
+To run any of the applications, navigate to the desired folder and type this command: 
+````go build <name_of_go_file>
+The previous command will compile the go file into a runnable.
+
+Once the runnable is created the it can be run in terminal, for example: 
+```./<name_of_runnable> 
+
+##The problems solved in this repository
+
+### 1. Kon’nichiwa, Sekai!
 
 Source: https://tour.golang.org/welcome/1
 
 Write a program that prints “Hello, world!” in Japanese (using Japanese characters) to the screen.
 
-## 2. Current time
+### 2. Current time
 
 Source: https://tour.golang.org/welcome/4
 
 Write a program that prints the current time and date to the console.
 
-## 3. FizzBuzz
+### 3. FizzBuzz
 
 Source: http://wiki.c2.com/?FizzBuzzTest
 
 Write a program that prints the numbers from 1 to 100, except for the following conditions. For multiples of three print “Fizz” instead of the number, and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.
 
-## 4. Factorial digit sum
+### 4. Factorial digit sum
 
 Write a function that calculates the sum of the digits of the factorial of a number. n! means n x (n − 1) … x 3 x 2 x 1. For example, 10! = 10 x 9 x … x 3 x 2 x 1 = 3628800, and the sum of the digits in the number 10! is 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27. Find the sum of the digits in the number 100!
 
-## 5. Guessing game
+### 5. Guessing game
 
 Source: https://adriann.github.io/programming_problems.html
 
 Write a guessing game where the user must guess a secret number. After every guess the program tells the user whether their number was too large or too small. At the end the number of tries needed should be printed. It counts only as one try if they input the same number multiple times consecutively.
 
-## 6. Largest and smallest in list
+### 6. Largest and smallest in list
 
 Source: https://adriann.github.io/programming_problems.html
 
 Write a function that returns the largest and smallest elements in a list.
 
-## 7. Palindrome test
+### 7. Palindrome test
 
 Source: https://adriann.github.io/programming_problems.html
 
 Write a function that tests whether a string is a palindrome.
 
-## 8. Merge list and sort
+### 8. Merge list and sort
 
 Source: https://adriann.github.io/programming_problems.html
 
 Write a function that merges two sorted lists into a new sorted list. [1,4,6],[2,3,5] → [1,2,3,4,5,6].
 
-## 9. Newton’s method for square roots
+### 9. Newton’s method for square roots
 
 Source: https://tour.golang.org/flowcontrol/8
 
@@ -61,6 +77,6 @@ Hint: to declare and initialize a floating point value, give it floating point s
 
 z := float64(1)
 z := 1.0
-## 10. Reverse string
+### 10. Reverse string
 
 Write a function to reverse a string in Go.
