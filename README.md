@@ -3,7 +3,7 @@ This repository contains common programming problems solved in GO language.
 
 ### How to install and run GO
 
-To install, simply go to GO's website and download the installer https://golang.org/
+To install, simply go to GO's website and download the installer and run it: https://golang.org/
 
 When the installation is done, the "go" command is going to be avaialable in terminal.(You have to restart an opened terminal)
 
@@ -11,6 +11,7 @@ When the installation is done, the "go" command is going to be avaialable in ter
 
 To run any of the applications, navigate to the desired folder and type this command: 
 `go build <name_of_go_file>`
+
 The previous command will compile the go file into a runnable.
 
 Once the runnable is created the it can be run in terminal, for example: 
