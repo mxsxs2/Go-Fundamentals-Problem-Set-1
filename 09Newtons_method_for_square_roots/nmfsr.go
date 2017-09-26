@@ -10,43 +10,37 @@ z := 1.0*/
 
 //It is the main package
 package main
+
 //imports
-import(
+import (
 	"fmt"
 	"math"
 )
 
-//Function go calculate square root
+/*Function go calculate square root
+This function is more accurate than the below one*/
 func Sqrt(x float64) float64 {
-	//Initialize the estimated sqrt to the number itself
- 	z := x
-    
-	//Function to estimate the squerae root
-    calculate := func() float64 {
-    	return z - ((z*z - x) / (2 * z))
-    }
-    //Loop until the estimation is very close to 0
-    for z_next := calculate(); math.Abs(z_next - z) > 0.00000001
-    {	
-		//Set the new estimation to be the old one
-    	z = z_next
-		//Recalculate the estimation
-		z_next=calculate()
-    }
+	//Create variables for calculation
+	z := x
+	//Loop until it is close to 0.00000001
+	for z_next := z + 1; math.Abs(z_next-z) > 0.00000001; {
+		z = z_next
+		//estimate the squerae root
+		z_next = z - ((z*z - x) / (2 * z))
+	}
 	//Return the estimated number
-    return z
+	return z
 }
+
 //Main function
 func main() {
 
-	fmt.Println("1 new:",Sqrt(1))
-	fmt.Println("1 math.Sqrt(x)",math.Sqrt(1))
+	fmt.Println("1 new method:", Sqrt(1))
+	fmt.Println("1 math.Sqrt(x)", math.Sqrt(1), "\n")
 
-	fmt.Println("2 new:",Sqrt(2))
-	fmt.Println("3 math.Sqrt(x)",math.Sqrt(2))
+	fmt.Println("2 new method :", Sqrt(2))
+	fmt.Println("3 math.Sqrt(x)", math.Sqrt(2), "\n")
 
-	fmt.Println("3 new:",Sqrt(3))
-	fmt.Println("3 math.Sqrt(x)",math.Sqrt(3))
+	fmt.Println("3 new method:", Sqrt(3))
+	fmt.Println("3 math.Sqrt(x)", math.Sqrt(3), "\n")
 }
-
-
