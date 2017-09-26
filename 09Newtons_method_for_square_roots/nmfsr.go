@@ -15,15 +15,22 @@ package main
 import (
 	"fmt"
 	"math"
+	"os"
+	"strconv"
 )
 
 /*Function go calculate square root
 This function is more accurate than the below one*/
 func Sqrt(x float64) float64 {
+	//Return 0 if the input is 0
+	if x <= 0 {
+		return 0
+	}
+
 	//Create variables for calculation
 	z := x
 	//Loop until it is close to 0.00000001
-	for z_next := z + 1; math.Abs(z_next-z) > 0.00000001; {
+	for z_next := z + 0.1; math.Abs(z_next-z) > 0.00000001; {
 		z = z_next
 		//estimate the squerae root
 		z_next = z - ((z*z - x) / (2 * z))
@@ -35,12 +42,26 @@ func Sqrt(x float64) float64 {
 //Main function
 func main() {
 
-	fmt.Println("1 new method:", Sqrt(1))
-	fmt.Println("1 math.Sqrt(x)", math.Sqrt(1), "\n")
+	num := 0.0
+	//Check if there is any argument supplied
+	if len(os.Args) > 1 {
+		//Parse the incoming command
+		n, _ := strconv.ParseFloat(os.Args[1], 64)
+		num = n
+	} else {
+		//Set the default number
+		num = 3.0
 
-	fmt.Println("2 new method :", Sqrt(2))
-	fmt.Println("3 math.Sqrt(x)", math.Sqrt(2), "\n")
+		fmt.Println("You can specify which number to use for the sqare root by adding a number after the name of the runnable in terminal.")
+		fmt.Println("For example: ./nmfsr.exe 12")
+		fmt.Println("Default number is 3\n")
+	}
 
-	fmt.Println("3 new method:", Sqrt(3))
-	fmt.Println("3 math.Sqrt(x)", math.Sqrt(3), "\n")
+	if num <= 0 {
+		fmt.Println("The number has to be higher than 0")
+	} else {
+		fmt.Println("Square root of", num, "in the new method:", Sqrt(num))
+		fmt.Println("Square root of", num, "in GO's built in method. math.Sqrt(x)", math.Sqrt(num), "\n")
+	}
+
 }
