@@ -69,6 +69,8 @@ func main() {
 	}
 
 	fmt.Println("Congratualtions you guessed the number with", tries, "tries")
+	fmt.Println("\nYou can specify which number to use for the upper limit of the random number generator by adding a number after the name of the runnable in terminal.")
+	fmt.Println("For example: ./guessing_game.exe 200")
 }
 
 //Function used to get the command line argument and return a random number between 0 and the command line argument.
