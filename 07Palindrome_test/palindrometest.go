@@ -14,7 +14,7 @@ import (
 //Main function
 func main() {
 
-	fmt.Println("Please input a word to check if it is a palindrome:")
+	fmt.Println("Please input a word or sentence to check if it is a palindrome:")
 	//Get the input
 	input := getInputString()
 	//Check if it is palindrome
