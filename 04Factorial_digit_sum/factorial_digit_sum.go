@@ -21,16 +21,13 @@ import (
 	"math/big"
 	"os"
 	"strconv"
+	"strings"
 )
 
 //Main function
 func main() {
 	//Get the number from the arguments
 	num, err := getNumber()
-	//Calculate the factorial
-	fact := getFactorialofnum(num)
-	//claclutae factorial and add the numbers together
-	sum := getSumofBigInt(fact)
 
 	//Check if there was any error with the number intake
 	if err != nil {
@@ -38,11 +35,17 @@ func main() {
 		fmt.Println(err)
 	}
 
+	//Calculate the factorial
+	fact := getFactorialofnum(num)
+
 	//If the printvalue flag is turned on
 	if isFlagOn("-printvalue") {
 		//Print the factorial out
-		fmt.Printf("%d!==", fact)
+		fmt.Printf("%d!=%v\n", num, fact.String())
 	}
+
+	//calculate factorial and add the numbers together
+	sum := getSumofBigInt(fact)
 
 	//Print the sum
 	fmt.Println("The sum of factorial", num, " is :", sum)
@@ -80,7 +83,7 @@ func isFlagOn(flag string) bool {
 		//Loop the arguments
 		for _, arg := range os.Args {
 			//If the flag was found then return true
-			if arg == flag {
+			if strings.Compare(arg, flag) == 0 {
 				return true
 			}
 		}
@@ -92,9 +95,9 @@ func isFlagOn(flag string) bool {
 //Function used to get a factorial of a number
 func getFactorialofnum(num int64) *big.Int {
 	//Factorial holder
-	factorial := new(big.Int)
+	//factorial :=
 	//Do factorial
-	return factorial.MulRange(1, num)
+	return new(big.Int).MulRange(1, num)
 }
 
 //Function used to return the sum of a big int
@@ -103,7 +106,6 @@ func getSumofBigInt(factorialNumber *big.Int) int {
 	sum := 0
 	//Holder for the number at position
 	n := new(big.Int)
-
 	//Do factorial and loop it's numbers
 	for factorialNumber.BitLen() > 0 {
 		//Calculation: factorial/(position on power of 10)%10
